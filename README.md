@@ -2,40 +2,27 @@
 
 1. Clone the repository
 
-2. Install poetry 
+2. Install uv 
 
 ```bash
-pip install poetry
+pip install uv
 ```
 
-3. Define which python version you want to use
+3. Sync the dependencies
 
 ```bash
-poetry env use "path_to_your_python_version"
+uv sync
 ```
 
-4. Install the dependencies
-
-```bash
-poetry install --no-root
-```
 
 # Folder structure
 
 ```bash
-├───Book
-│   └───06_VectorDatabases
-└───RheinwerkCode
-    ├───03_PreTrainedNetworks
-    ├───04_LLMs
-    ├───05_PromptEngineering
-    ├───06_VectorDatabases
-    │   ├───10_DataLoader
-    │   └───20_Chunking
-    ├───07_RAG
-    ├───08_AgenticSystems
-    ├───09_Deployment
-    ├───10_Outlook
-    ├───data
-    └───writing_assitent
+├───02_PreTrainedNetworks
+├───03_LLMs
+├───04_PromptEngineering
+├───05_VectorDatabases
+├───06_RAG
+├───07_AgenticSystems
+├───08_Deployment
 ```
