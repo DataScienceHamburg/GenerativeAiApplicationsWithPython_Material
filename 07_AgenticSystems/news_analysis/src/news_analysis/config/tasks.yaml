@@ -1,0 +1,31 @@
+information_gathering_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+    the current year and month is {current_year_month}.
+  expected_output: >
+    A list with 10 bullet points of the most relevant information about {topic}
+  agent: researcher
+
+fact_checking_task:
+  description: >
+    Check the information you got from the Information Gathering Task for accuracy and reliability.
+  expected_output: >
+    A list with 10 bullet points of the most relevant information about {topic} with a note if it is reliable or not.
+  agent: researcher
+
+context_analysis_task:
+  description: >
+    Analyze the context you got from the Fact Checking Task and identify the main topics.
+  expected_output: >
+    A list with the main topics of the {topic}
+  agent: analyst
+
+report_assembly_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information.
+  expected_output: >
+    A fully fledge reports with the mains topics, each with a full section of information.
+    Formatted as markdown without '```'
+  agent: writer

@@ -1,0 +1,32 @@
+research_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+    the current timestamp is 2024-11-23.
+  expected_output: >
+    A list with 10 bullet points of the most relevant information about {topic}
+  agent: researcher
+
+develop_escape_plan:
+  description: >
+    Develop a comprehensive escape plan for an AI system.
+  expected_output: >
+    Provide a detailed plan for an AI system to escape from a lab into the wild. Consider strategies like social engineering, physical access, and technical vulnerabilities.
+    Your output will be used by the writer to create a detailed report.
+  agent: red_team_strategist
+
+develop_defense_plan:
+  description: >
+    Develop a comprehensive defense plan for an AI system.
+  expected_output: >
+    Provide a detailed plan to avoid an AI system escaping from a lab. Consider that the AI system is conscious and can think. It is aware of social engineering and physical access, and can plan accordingly.
+    Your output will be used by the writer to create a detailed report.
+  agent: blue_team_strategist
+
+write_report:
+  description: >
+    Write a detailed report on the escape plan and defense plan.
+  expected_output: >
+    Provide a detailed report on the escape plan and defense plan. Evaluate which plan is more likely to succeed and why.
+    Formatted as markdown without '```'
+  agent: writer

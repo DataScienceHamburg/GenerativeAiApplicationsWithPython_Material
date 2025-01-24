@@ -1,0 +1,22 @@
+[project]
+name = "news_analysis"
+version = "0.1.0"
+description = "news-analysis using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "agentops>=0.3.21",
+    "crewai[tools]>=0.79.4,<1.0.0",
+    "pydantic>=2.9.2",
+]
+
+[project.scripts]
+news_analysis = "news_analysis.main:run"
+run_crew = "news_analysis.main:run"
+train = "news_analysis.main:train"
+replay = "news_analysis.main:replay"
+test = "news_analysis.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
