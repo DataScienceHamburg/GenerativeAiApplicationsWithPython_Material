@@ -1,5 +1,8 @@
 #%% packages
 from agents import Runner, Agent
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 #%% define the agents
@@ -14,14 +17,14 @@ german_agent = Agent(
 )
 
 #%% triage agent
-triage_agent = Agent(
+phone_operator_agent = Agent(
     name="Triage Agent",
     instructions="You are a helpful agent that can handoff to the appropriate agent based on the user's language.",
     handoffs=[english_agent, german_agent],
 )
 
 #%% define the runner
-response = await Runner.run(triage_agent, 
+response = await Runner.run(phone_operator_agent, 
                       input="Ich brauche Hilfe mit meiner Buchung.")
 
 
@@ -30,3 +33,5 @@ response.final_output
 
 # %% check all raw responses
 response.raw_responses
+
+# %%

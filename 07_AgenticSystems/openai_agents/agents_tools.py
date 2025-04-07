@@ -1,6 +1,10 @@
 #%% packages
 from agents import Runner, Agent, function_tool
 import wikipedia
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # %% wikipedia tools
 @function_tool
 def get_wikipedia_summary(query: str):
